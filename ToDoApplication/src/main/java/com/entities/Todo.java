@@ -16,6 +16,7 @@ public class Todo {
 	private String todoContent;
 	private Date todoDate;
 	
+	
 	public Todo(String todoTitle, String todoContent, Date todoDate) {
 		super();
 		this.todoTitle = todoTitle;
@@ -27,6 +28,19 @@ public class Todo {
 		super();
 	}
 
+	
+	public int getTodoId() {
+		return todoId;
+	}
+
+	public void setTodoId(int todoId) {
+		this.todoId = todoId;
+	}
+
+	public Date getTodoDate() {
+		return todoDate;
+	}
+	
 	public String getTodoTitle() {
 		return todoTitle;
 	}
