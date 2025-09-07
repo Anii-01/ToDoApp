@@ -1,7 +1,6 @@
 package com.entities;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,64 +8,61 @@ import javax.persistence.Id;
 
 @Entity
 public class Todo {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int todoId;
-	private String todoTitle;
-	private String todoContent;
-	private Date todoDate;
-	
-	
-	public Todo(String todoTitle, String todoContent, Date todoDate) {
-		super();
-		this.todoTitle = todoTitle;
-		this.todoContent = todoContent;
-		this.todoDate = todoDate;
-	}
-	
-	public Todo() {
-		super();
-	}
 
-	
-	public int getTodoId() {
-		return todoId;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int todoId;
+    private String todoTitle;
+    private String todoContent;
+    private Date todoDate;
 
-	public void setTodoId(int todoId) {
-		this.todoId = todoId;
-	}
+    // Constructors
+    public Todo(String todoTitle, String todoContent, Date todoDate) {
+        super();
+        this.todoTitle = todoTitle;
+        this.todoContent = todoContent;
+        this.todoDate = todoDate;
+    }
 
-	public Date getTodoDate() {
-		return todoDate;
-	}
-	
-	public String getTodoTitle() {
-		return todoTitle;
-	}
+    public Todo() {
+        super();
+    }
 
-	public void setTodoTitle(String todoTitle) {
-		this.todoTitle = todoTitle;
-	}
+    // Getters and Setters
+    public int getTodoId() {
+        return todoId;
+    }
 
-	public String getTodoContent() {
-		return todoContent;
-	}
+    public void setTodoId(int todoId) {
+        this.todoId = todoId;
+    }
 
-	public void setTodoContent(String todoContent) {
-		this.todoContent = todoContent;
-	}
+    public String getTodoTitle() {
+        return todoTitle;
+    }
 
-	public Date setTodoDate() {
-		return todoDate;
-	}
+    public void setTodoTitle(String todoTitle) {
+        this.todoTitle = todoTitle;
+    }
 
-	public void setTodoDate(Date todoDate) {
-		this.todoDate = todoDate;
-	}
+    public String getTodoContent() {
+        return todoContent;
+    }
 
-	@Override
-	public String toString() {
-		return this.getTodoTitle()+" : "+this.todoContent;
-	}
+    public void setTodoContent(String todoContent) {
+        this.todoContent = todoContent;
+    }
+
+    public Date getTodoDate() {
+        return todoDate;
+    }
+
+    public void setTodoDate(Date todoDate) {
+        this.todoDate = todoDate;
+    }
+
+    @Override
+    public String toString() {
+        return this.todoTitle + " : " + this.todoContent;
+    }
 }
